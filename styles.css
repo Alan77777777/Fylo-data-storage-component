@@ -1,0 +1,255 @@
+/* global */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    /* ## Colors
+    
+    ### Primary */
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    /* ### Neutral */
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    background-image: url(/images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 130px auto;
+}
+
+
+/* footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+    color: var(--Very-dark-blackish-blue);
+}
+
+
+/* First box */
+
+.firstbox {
+    justify-content: center;
+    padding: 40px;
+    margin: 7.5px auto;
+    width: 327px;
+    height: 200px;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px 95px 10px 10px;
+}
+
+.icons {
+    margin-top: 30px;
+}
+
+.icons ul li {
+    background-color: var(--Very-Dark-Blue);
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.icons ul li img {
+    margin: 0px auto;
+    align-self: center;
+}
+
+.icons ul {
+    display: flex;
+}
+
+.icons ul li {
+    margin: 0px 15px;
+}
+
+.icons ul li:first-of-type {
+    margin: 0px;
+}
+
+.icons ul li:last-of-type {
+    margin: 0px;
+}
+
+
+/* second box */
+
+.secondbox {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 160px;
+    background-color: var(--Dark-Blue);
+    padding: 40px;
+    text-align: center;
+    margin: 7.5px auto;
+    border-radius: 10px;
+}
+
+.secondbox ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondbox p {
+    color: var(--Pale-Blue);
+}
+
+.secondbox span {
+    color: var(--Pale-Blue);
+    font-weight: 700;
+}
+
+.triangle {
+    display: none;
+}
+
+
+/* box */
+
+.secondbox .box {
+    background-color: white;
+    border-radius: 10px;
+    width: 180px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    letter-spacing: 1px;
+    position: relative;
+    left: 13%;
+    top: 17%;
+}
+
+#gbleft {
+    color: hsla(229, 7%, 55%, 0.85);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    position: relative;
+    top: -8px;
+    left: 4px;
+}
+
+.box span {
+    font-size: 43px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+}
+
+
+/* progress bar */
+
+.progress-bar {
+    width: 100%;
+    background-color: #0c122c;
+    padding: 3px;
+    border-radius: 1rem;
+    margin: 15px 0 10px 0;
+}
+
+.progress-bar-color {
+    width: 75%;
+    background-image: var(--Gradient);
+    background-image: linear-gradient(90deg, #ffa399, #ff4d97);
+    padding: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-radius: 1rem;
+}
+
+.ball {
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: #dddbff;
+    border-radius: 1rem;
+}
+
+
+/* responsive */
+
+@media(min-width: 980px) {
+    .content {
+        display: flex;
+        flex-direction: row;
+        margin: 130px auto;
+    }
+    .secondbox {
+        margin: 40px 15px;
+    }
+    .firstbox {
+        margin: 0px 15px;
+    }
+    body {
+        background-image: url(/images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: var(--Very-Dark-Blue);
+        background-position-y: bottom;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        margin: 260px auto;
+    }
+    .secondbox {
+        text-align: left;
+        width: 540px;
+    }
+    .secondbox .box {
+        left: 61%;
+        top: -211%;
+        border-radius: 10px 10px 0px 10px;
+    }
+    .triangle {
+        position: relative;
+        display: block;
+        width: 0;
+        height: 0;
+        border-right: 10px solid white;
+        border-top: 10px solid white;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        left: 95.7%;
+        top: -211%;
+    }
+}
